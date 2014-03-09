@@ -1,0 +1,141 @@
+/* RESET */
+html {
+background:#FFFFFF none repeat scroll 0 0;
+color:#000000;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend/*, input, button, textarea, p, blockquote, th, td*/ {
+margin:0;
+padding:0;
+}
+/*
+table {
+border-collapse:collapse;
+border-spacing:0;
+}
+*/
+td {
+text-align:left;
+vertical-align:top;
+}
+fieldset, img {
+border:0 none;
+}
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+font-style:inherit;
+font-weight:inherit;
+}
+del, ins {
+text-decoration:none;
+}
+li {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+}
+caption, th {
+text-align:left;
+}
+h1, h2, h3, h4, h5, h6 {
+font-size:100%;
+font-weight:normal;
+}
+q:before, q:after {
+content:'';
+}
+abbr, acronym {
+border:0 none;
+font-variant:normal;
+}
+sup {
+vertical-align:baseline;
+}
+sub {
+vertical-align:baseline;
+}
+legend {
+ color:#000000;
+}
+
+p{text-align:left}
+textarea{font-family:monospace;}
+ol, ul, dl {
+margin-top: 1em;
+margin-left: 2em;
+}
+ol li {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:decimal;
+}
+ul li {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:disc;
+}
+
+.logo{font-family:courier-new,monospace;font-size:150%}
+.logo > a {text-decoration: none}
+.sublogo{font-family:ariel,sans-serif;font-size:70%}
+.heading{font-family:ariel,sans-serif;font-weight:bold;font-size:84%}
+.label{font-family:ariel,sans-serif;font-size:84%}
+.text{font-family:ariel,sans-serif;font-size:84%}
+.text .heading{font-weight:bold; font-size:100%}
+.text .label{font-size:100%}
+.error{font-family: ariel,sans-serif;font-size:84%;color:red;}
+.error-box{
+  font-family: ariel,sans-serif;
+  font-size: 84%;
+  color: red;
+  background: #f6f6f6;
+  padding: 1em;
+  border: 1px solid red;
+  display: table;
+  }
+.notice-box{
+  font-family: ariel,sans-serif;
+  font-size: 84%;
+  color: green;
+  background: #f6f6f6;
+  padding: 1em;
+  border: 1px solid #ccc;
+  display: table;
+  }
+.posthead{font-family:ariel,sans-serif;font-size:84%;color:gray}
+.menu{font-family:ariel,sans-serif;font-size:80%}
+.gravatar{
+  border: 1px solid #ccc;
+  padding: 1px;
+  margin-bottom: 2px;
+  vertical-align: middle;
+  }
+.highlight { 
+  line-height: 1.1em;  
+}
+.highlight pre{
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.1em;
+  font-family: monospace;
+}
+.section{font-family:ariel,sans-serif;font-size:84%;margin-top:1em;}
+.code table {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #f6f6f6;
+}
+.editor {
+  border: 1px solid #ccc;
+  background: #f6f6f6;
+  display: table;
+}
+.box {
+  border: 1px solid #ccc;
+  background: #f6f6f6;
+  display: table;
+}
+.front-menu {
+  border: 1px solid #ccc;
+  background: #f6f6f6;
+  display: table;
+  margin-left: 1em;
+}

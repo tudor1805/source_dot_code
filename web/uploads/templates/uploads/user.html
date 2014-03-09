@@ -1,0 +1,95 @@
+{% extends "uploads/base.html" %}
+{% load staticfiles %}
+{% load upload_filters %}
+
+{% block extra_css_file %}
+  <link href="{% static 'uploads/code.css' %}" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block extra_css %}     
+  td{vertical-align:top;}
+  td.label{color: #666}
+{% endblock %}
+
+{% block content %}
+<div style="margin: 8px 8px 8px 8px">
+  <p>
+  <div class="text">
+    <div class="box" style="width: 200px;">
+      <table cellpadding="10">
+        <tr>
+          <td>
+            <span class="heading">{{user.username}}</span>
+            <p>
+            <table width="100%">
+              <tr>
+                <td class="label"><nobr>First Name:</nobr></td>
+                <td>{{user.first_name}}</td>
+              </tr>
+              <tr>
+                <td class="label"><nobr>Second Name:</nobr></td>
+                <td>{{user.last_name}}</td>
+              </tr>
+              <tr>
+                <td class="label"><nobr>Email:</nobr></td>
+                <td>{{user.email}}</td>
+              </tr>
+              {# Allow logged user to change profile data #}
+              {% if user.is_authenticated %} 
+              <tr>
+                <td colspan="2" style="text-align: right">
+                  <a href="/uploads/users/{{user.username}}/edit">edit</a>
+                </td>
+              </tr>
+              {% endif %}
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <p>
+
+  <span class="heading">Saved pastes by {{user.username}} :</span>
+  <br/>
+
+  {# Print information for a specific paste #}
+  {% for paste in userPastes %}
+  <div class="section">
+      <span class="heading">{{ paste.language }}</span>,
+      <span class="label">pasted {{ paste.time }}</span>
+      <br/>
+  </div>
+
+  <div class="code">
+    <table width="100%" border="0" cellpadding="10" cellspacing="0">
+      <tr>
+        <td style="border-right: 1px solid #ccc; text-align: right; vertical-align: top">
+          <div class="highlight">
+          <pre>{% for i in paste.code|get_num_lines|times %}<a name="{{paste.hash_id}}-line-{{i}}">{{i}}</a><br/>{% endfor %}</pre>
+          </div>
+        </td>
+        <td width="100%" style="vertical-align: top">
+          {{paste.code|hl|safe}} 
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <table cellspacing="0" cellpadding="0" width="100%">
+    <tr>
+      <td>
+        <span class="label">
+          <a href="{{paste|get_link}}">view</a>
+          ({{paste.code|get_num_lines}} lines,  {{paste.output|get_num_lines}} lines of output)
+       </span>
+      </td>
+      <td style="text-align: right">
+      </td>
+    </tr>
+  </table>
+  {% endfor %}
+</div>
+{% endblock %}
+
+

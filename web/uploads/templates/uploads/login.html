@@ -1,0 +1,64 @@
+{% extends "uploads/base.html" %}
+
+{% block content %}
+
+{% if error_message %}
+<div style="margin: 8px 8px 8px 8px">
+  <p>
+    <center><div class="error-box">{{ error_message }}</div></center>
+  </p>
+</div>
+{% endif %}
+
+<div style="margin: 8px 8px 8px 8px">    
+  <p>
+  <table width="75%">
+    <tr>
+      <td>
+        <span class="heading">Login:</span>
+        <form action="/uploads/login" method="post">
+        {% csrf_token %}
+          <table>
+            <tr>
+              <td><span class="label">Username:</span></td>
+              <td><input type="text" name="username"/></td>
+            </tr>
+            <tr>
+              <td><span class="label">Password:</span></td>
+              <td><input type="password", name="password"/></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: right">
+                <input type="submit" name="submit" value="Login"/>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </td>
+    <tr>
+      <td>
+        <br/>
+        <span class="heading">Create Account:</span>
+        <form action="/uploads/mkacct" method="post">
+        {% csrf_token %}
+          <table>
+            <tr>
+              <td><span class="label">Username:</span></td>
+              <td><input type="text" name="username"/></td>
+            </tr>
+            <tr>
+              <td><span class="label">Password:</span></td>
+              <td><input type="password", name="password"/></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: right">
+                <input type="submit" name="submit" value="Create Account"/>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </td>
+    </tr>
+  </table>
+</div>
+{% endblock %}

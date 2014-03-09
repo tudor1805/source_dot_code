@@ -1,0 +1,35 @@
+<table width="100%" cellpadding="0" cellspacing="0" style="border-bottom: 1px solid #ccc; margin: 0; width: 100%; padding: 8px 8px 4px 8px;">
+  <tr>
+    <td style="text-align: left">
+      <span class="logo"><a href="/uploads/">source.code</a></span>
+      {% if not is_index_page %}
+      <nobr>
+          &nbsp;&nbsp;&nbsp;<span class="menu">[ <a href="/uploads">create a new paste</a> ]</span>
+      </nobr>
+      {% endif %}
+    </td>
+    <td style="text-align: right">
+      <form name="logout_form" action="/uploads/logout" method="post">
+      {% csrf_token %}
+        <nobr>
+          {% if user.is_authenticated %}
+          <span class="menu">
+            <a href="/uploads/users/{{user.username}}">{{user.username}}</a>
+          </span>
+          <span class="menu">
+           <a href="#" onClick="document.logout_form.submit();return false">logout</a>
+          </span>
+          {% else %}
+          <span class="menu">
+            <a href="/uploads/login">login</a>
+          </span>
+          {% endif %}
+          <span class="menu">|</span>
+          <span class="menu">
+            <a href="/uploads/about">about</a>
+          </span>
+        </nobr>
+      </form> 
+    </td>
+  </tr>
+</table>

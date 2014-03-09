@@ -1,0 +1,85 @@
+<table border="0" cellpadding="0" cellspacing="0" width="1%">
+  <tr>
+    <td style="vertical-align: top" width="1%">
+      <div class="editor" id="editor">
+        <form action="/uploads/submit" method="post">
+         {% csrf_token %}
+          <table cellpadding="10" width="1%">
+            <tr>
+              <td colspan="2"><span class="label">source.code
+              is an online compiler/interpreter, and a simple
+              collaboration tool.<br>
+              Paste your code below, and source.code will run
+              it and give you a short URL you can use to
+              share it in chat or email.</span></td>
+            </tr>
+
+            <tr>
+              <td style="vertical-align: top">
+                <span style="vertical-align:middle" class="label">Language:</span>
+                  <br>
+                    <nobr>
+                      <label>
+                        <input style="vertical-align:middle" type="radio" name="lang" value="C" checked="checked">
+                        <span style="vertical-align:middle" class="label">C</span>
+                      </label>
+                    </nobr>
+                  <br>
+                    <nobr>
+                      <label>
+                        <input style="vertical-align:middle" type="radio" name="lang" value="C++">
+                        <span style="vertical-align:middle" class="label">C++</span>
+                      </label>
+                    </nobr>
+                    <nobr>
+                      <label>
+                        <input style="vertical-align:middle" type="radio" name="lang" value="Python">
+                        <span style="vertical-align:middle" class="label">Python</span>
+                      </label>
+                    </nobr>
+                  <br>
+              </td>
+              <td style="vertical-align: middle">
+                <textarea id="textarea" name="code" cols="80" rows="15" wrap="off"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="vertical-align: middle; text-align: right">
+                <table cellspacing="0" cellpadding="0" width="100%">
+                  <tr>
+                    <td style="text-align: right;">
+                      <div style="float: right">
+                        <table>
+                          <tr>
+<!--
+                            <td>
+                              <label style="margin-right:1em">
+                                <input style="vertical-align:middle" type="checkbox" name="private" value="True" checked="false">
+                                <span style="vertical-align:middle" class="label">Private</span>
+                                <span class="label" style="font-size:75%;">[<a href="/help/private-pastes"></a>]</span>
+                              </label>
+                            </td>
+-->
+                            <td>
+                              <label style="margin-right:1em">
+                                <input style="vertical-align:middle" type="checkbox" name="run" value="True" checked="true">
+                                <span style="vertical-align:middle" class="label">Run code</span>
+                              </label>
+                            </td>
+                            <td style="text-align: right">
+                              <input type="submit" name="submit" value="Submit">
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </td>
+  </tr>
+</table>

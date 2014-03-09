@@ -1,0 +1,64 @@
+{% extends "uploads/base.html" %}
+
+{% load staticfiles %}
+{% load upload_filters %}
+
+{% block extra_css_file %}
+  <link href="{% static 'uploads/code.css' %}" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block extra_css %}
+  td{vertical-align:top;}
+  td.label{color: #666}
+{% endblock %}
+
+{% block content %}
+
+<p>
+<div class="text">
+<div class="box" style="width: 200px;">
+<table cellpadding="10">
+<tr>
+<td>
+
+<span class="heading">{{user.username}}</span>
+<p>
+
+<form action="/uploads/users/{{user.username}}/edit" method="post">
+{% csrf_token %}
+<table>
+  <tr>
+    <td class="label"><nobr>First Name:</nobr></td>
+    <td>
+      <input maxlength="255" name="firstname" type="text" value="{{user.first_name}}"/><br/><span class="error"></span>
+    </td>
+  </tr>
+  <tr>
+    <td class="label"><nobr>Last Name:</nobr></td>
+    <td>
+      <input maxlength="255" name="lastname" type="text" value="{{user.last_name}}"/><br/><span class="error"></span>
+    </td>
+  </tr>
+  <tr>
+    <td class="label"><nobr>Email:</nobr></td>
+    <td>
+      <input maxlength="255" name="email" type="text" value="{{user.email}}"/>
+      <br/><span class="error"></span>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <br/>
+      <input name="submit" type="submit" value="Submit" />
+    </td>
+  </tr>
+</table>
+</form>
+
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+{% endblock %}

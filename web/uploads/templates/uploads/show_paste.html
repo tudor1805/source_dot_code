@@ -1,0 +1,100 @@
+{% extends "uploads/base.html" %}
+{% load staticfiles %}
+{% load upload_filters %}
+
+{% block title %}
+  {{paste.language }} code 
+  {% if paste.user.username %} by {{ paste.user.username }} {% endif %}
+  - {{ paste.code|get_num_lines }} lines - source.code 
+
+{% endblock %}
+
+{% block extra_css_file %}
+  <link href="{% static 'uploads/code.css' %}" media="screen" rel="stylesheet" type="text/css">
+{% endblock %} 
+
+{{ paste.user.username }}
+
+{% block content %}
+
+<div style="margin: 8px 8px 8px 8px">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td>
+        <br/>
+
+        <table cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td>
+              <nobr>
+                <span class="heading">Link:</span>
+                <span class="menu">
+                  <a href="{{paste|get_link}}">{{paste|get_link}}</a>
+                </span>
+              </nobr>
+              <nobr>
+                <span class="menu">&nbsp;&nbsp;&nbsp;[
+                  <a href="{{paste|get_link}}/raw">raw code</a> |
+                  <a href="#output">output</a> |
+                  <a href="{{paste|get_link}}/fork">fork</a>]
+                </span>
+              </nobr>
+            </td>
+            <td style="text-align: right">
+              <br/>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        
+        {% if paste.user.username %} 
+          <span class="label"> <a href="/uploads/users/{{paste.user.username}}">{{paste.user.username}}</a> - </span>
+        {% endif %}
+        <span class="heading">{{paste.language}}</span>,
+        <span class="label"> pasted {{paste.time}} :</span>
+        <br/>
+
+        <div class="code">
+        <table width="100%" border="0" cellpadding="10" cellspacing="0">
+          <tr>
+            <td style="border-right: 1px solid #ccc; text-align: right; vertical-align: top">
+              <div class="highlight">
+                  <pre>{% for i in paste.code|get_num_lines|times %}<a name="line-{{i}}">{{i}}</a><br/>{% endfor %}</pre>
+              </div>
+            </td>
+            <td width="100%" style="vertical-align: top">
+              {{ paste.code|hl|safe }} 
+            </td>
+          </tr>
+        </table>
+        </div>
+
+        <br/>
+        <br/>
+        {% if paste.output %}
+        <a name="output"><span class="heading">Output:</span></a>
+        <div class="code">
+          <table border="0" cellpadding="10" cellspacing="0">
+            <tr>
+              <td style="border-right: 1px solid #ccc; text-align: right; vertical-align: top">
+                <div class="highlight">
+                  <pre>{% for i in paste.output|get_num_lines|times %}<a name="output-line-{{i}}">{{i}}</a><br/>{% endfor %}</pre>
+                </div>
+              </td>
+              <td width="100%" style="vertical-align: top">
+                {{ paste.output|hl|safe }} 
+              </td>
+            </tr>
+          </table>
+        </div>
+       {% endif %} 
+      </td>
+     </tr>
+</table>
+
+<br/>
+<br/>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,14 @@
+List of jars
+
+activation.jar                 jackson-jaxrs-1.9.11.jar       jaxb-impl.jar                       jersey-server.jar                saaj-api.jar
+asm-all-repackaged-2.1.88.jar  jackson-mapper-asl-1.9.11.jar  jaxb-xjc.jar                        jettison-1.3.3.jar               saaj-impl.jar
+cglib-2.1.88.jar               jackson-xc-1.9.11.jar          jaxws-api.jar                       json_simple-1.0.2.jar            stax2-api.jar
+FastInfoset.jar                javax.annotation-api-1.2.jar   jaxws-rt.jar                        jsr173_1.0_api.jar               stax-ex.jar
+gmbal-api-only.jar             javax.annotation.jar           jaxws-tools.jar                     jsr181-api.jar                   streambuffer.jar
+guava-14.0.1.jar               javax.inject-2.1.88.jar        jersey-client.jar                   management-api.jar               validation-api-1.1.0.jar
+ha-api.jar                     javax.mail_1.4.jar             jersey-common.jar                   mimepull.jar                     woodstox-core-asl.jar
+hk2-api-2.1.88.jar             javax.servlet-api-3.1.0.jar    jersey-container-servlet-core.jar   org.osgi.core-4.2.0.jar
+hk2-locator-2.1.88.jar         javax.ws.rs-api-2.0.jar        jersey-container-servlet.jar        osgi-resource-locator-1.0.1.jar
+hk2-utils-2.1.88.jar           jaxb-api-2.2.7.jar             jersey-media-json-jackson-2.0.jar   persistence-api-1.0.jar
+jackson-core-asl-1.9.11.jar    jaxb-api.jar                   jersey-media-json-jettison-2.0.jar  policy.jar
+

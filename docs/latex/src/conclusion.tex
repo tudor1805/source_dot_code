@@ -1,0 +1,30 @@
+% vim: set tw=78 sts=2 sw=2 ts=8 aw et ai:
+
+There are three areas which have remained unattained, and with good reason, because of their complexity.
+I plan on supporting these some time in the future.
+
+\begin{enumerate}
+
+\item{Different Architectures}
+
+The current implementation is tied to the x86 architecture.
+Current virtualization technologies are unfortunately very restrictive (It's hard to emulate PPC instruction set on a x86_64 bare metal).
+This is why support for these kind of features in the industry is limited.
+However, QEMU is a CPU simulator that is gaining more and more ground, and would be a good candidate for such a task.
+
+\item{Different Language versions}
+
+What is an user wants to compile a program using Python 2.6, or Python 3.0?. The same stands with C++98 vs C++11.
+There is more than one standard for each language.
+In order to provide support for this option, one would need a program that can change the runtime execution context.
+Another option would be to have different VM's, each with its own run environment. 
+
+\item{Kernel code}
+
+Compiling and running kernel code is difficult, because once in the kernel one typically has control over the whole system.
+Needless to say, we cannot simply compile kernel modules that users send, and insert them on our machine.
+A possible solution to this problem would involve using User Mode Linux, which is Linux run inside a regular process, providing the regular encapsulation that processes have, and would allow us to hook up with the existing ptrace mechanism, that is already implemented.
+\end{enumerate}
+
+
+Writing SourceDotCode has been a challenging task. Although it still lacks some features, it's an useful tool to have around, when a compiler is missing.

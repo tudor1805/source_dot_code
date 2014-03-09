@@ -1,0 +1,53 @@
+% vim: set tw=78 sts=2 sw=2 ts=8 aw et ai:
+
+We define Compile as a Service (CAAS), as a function taking as input a superset of the following parameters:
+\begin{enumerate}
+\item{Source code}
+\item{Language}
+\item{Architecture}
+\end{enumerate}
+and providing as output the execution result of running the program.
+
+
+As an inspiration for this project I had two platforms: 
+\begin{enumerate}
+\item{Infoarena}
+\item{VMChecker}
+\end{enumerate}
+
+They are both great platforms, but they are rigid, in the sense that they are targeted to certain operations.
+They are not general purpose compilation platforms, which forms the scope of my project.
+
+Infoarena only allows submitting code for certain programming challenges.
+As supported languages, it only allows submitting C and C++ code, differentiating between them by the file extension.
+
+VMChecker, is the platform for evaluating homeworks for a good amount of subjects, inside the Faculty of Automatic Control and Computers.
+It is a bit more complex than Infoarena, and it allows compiling programs in a greater amount of programming languages.
+Programs are typically compiled and run inside a Virtual Machine environment, hence the name "VMChecker".
+
+
+When designing an online compilation tool, there are certain challenges, most notably:
+\begin{enumerate}
+\item{Scalability}
+\item{Security}
+\end{enumerate}
+
+Scalability refers to how the application is going to handle a large number of incoming requests.
+Common bottlenecks in such applications occur between the Web Server and Database, and between the Web Server and secodary resources (Ex: When calling another Web Service for a specific task).
+
+The security issues that may arise in our case deal with the code execution.
+Allowing the user to execute arbitrary code on your machine would pose a huge risk.
+For example, he could attempt to reboot the machine, or create sockets and flood a destination with ICMP packets.
+
+In the next section, we are going to explore a way to overcome this problem.
+
+
+
+
+
+
+
+
+
+
+ 

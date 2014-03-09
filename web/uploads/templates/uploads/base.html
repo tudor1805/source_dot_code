@@ -1,0 +1,26 @@
+{% load staticfiles %}
+
+<html>
+  <head>
+    <meta name="source.code" content="Free Online Compiler-as-a-Service">
+    <meta name="author"      content="Tudor Cornea">
+    <meta http-equiv="Content-Type" content="text/html">
+    <link href="{% static 'uploads/main.css' %}" media="screen" rel="stylesheet" type="text/css">
+    {% block extra_css_file %}
+    {% endblock %} 
+    <title>{% block title %} source.code {% endblock %}</title>
+    <style type="text/css">
+      {% block extra_css %} {% endblock %}
+    </style>
+  </head>
+
+  <body>
+    {% block toolbar %}
+      {% include 'uploads/toolbar.html' %} 
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+  </body>
+
+</html>

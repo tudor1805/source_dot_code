@@ -1,0 +1,48 @@
+.highlight .c { line-height: 100%; color: #669933; font-style: italic } /* Comment */
+.highlight .k { line-height: 100%; color: #0033cc; font-weight: bold } /* Keyword */
+.highlight .cm { line-height: 100%; color: #669933; font-style: italic } /* Comment.Multiline */
+.highlight .cp { line-height: 100%; color: #cc3333 } /* Comment.Preproc */
+.highlight .c1 { line-height: 100%; color: #669933; font-style: italic } /* Comment.Single */
+.highlight .cs { line-height: 100%; color: #0000aa; font-style: italic } /* Comment.Special */
+.highlight .gd { line-height: 100%; color: #aa0000 } /* Generic.Deleted */
+.highlight .ge { line-height: 100%; font-style: italic } /* Generic.Emph */
+.highlight .gr { line-height: 100%; color: #aa0000 } /* Generic.Error */
+.highlight .gh { line-height: 100%; color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { line-height: 100%; color: #00aa00 } /* Generic.Inserted */
+.highlight .go { line-height: 100%; color: #888888 } /* Generic.Output */
+.highlight .gp { line-height: 100%; color: #555555 } /* Generic.Prompt */
+.highlight .gs { line-height: 100%; font-weight: bold } /* Generic.Strong */
+.highlight .gu { line-height: 100%; color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { line-height: 100%; color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { line-height: 100%; color: #0033cc } /* Keyword.Constant */
+.highlight .kd { line-height: 100%; color: #0033cc } /* Keyword.Declaration */
+v.highlight .kp { line-height: 100%; color: #0033cc } /* Keyword.Pseudo */
+.highlight .kr { line-height: 100%; color: #0033cc } /* Keyword.Reserved */
+.highlight .kt { line-height: 100%; color: #9966cc; font-weight: bold } /* Keyword.Type */
+.highlight .m { line-height: 100%; color: #000000 } /* Literal.Number */
+.highlight .s { line-height: 100%; color: #cc9933; font-weight: bold } /* Literal.String */
+.highlight .na { line-height: 100%; color: #1e90ff } /* Name.Attribute */
+.highlight .nb { line-height: 100%; color: #00aaaa } /* Name.Builtin */
+.highlight .no { line-height: 100%; color: #aa0000 } /* Name.Constant */
+.highlight .nd { line-height: 100%; color: #888888 } /* Name.Decorator */
+.highlight .ni { line-height: 100%; color: #800000; font-weight: bold } /* Name.Entity */
+.highlight .nn { line-height: 100%; color: #00aaaa } /* Name.Namespace */
+.highlight .nt { line-height: 100%; color: #1e90ff; font-weight: bold } /* Name.Tag */
+.highlight .ow { line-height: 100%; color: #3366ff } /* Operator.Word */
+.highlight .mf { line-height: 100%; color: #000000 } /* Literal.Number.Float */
+.highlight .mh { line-height: 100%; color: #000000 } /* Literal.Number.Hex */
+.highlight .mi { line-height: 100%; color: #000000 } /* Literal.Number.Integer */
+.highlight .mo { line-height: 100%; color: #000000 } /* Literal.Number.Oct */
+.highlight .sb { line-height: 100%; color: #cc9933; font-weight: bold } /* Literal.String.Backtick */
+.highlight .sc { line-height: 100%; color: #cc9933; font-weight: bold } /* Literal.String.Char */
+.highlight .sd { line-height: 100%; color: #cc9933; font-weight: bold } /* Literal.String.Doc */
+.highlight .s2 { line-height: 100%; color: #cc9933; font-weight: bold } /* Literal.String.Double */
+.highlight .se { line-height: 100%; color: #cc9933; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { line-height: 100%; color: #cc9933; font-weight: bold } /* Literal.String.Heredoc */
+.highlight .si { line-height: 100%; color: #cc9933; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { line-height: 100%; color: #cc9933; font-weight: bold } /* Literal.String.Other */
+.highlight .sr { line-height: 100%; color: #009999; font-weight: bold } /* Literal.String.Regex */
+.highlight .s1 { line-height: 100%; color: #cc9933; font-weight: bold } /* Literal.String.Single */
+.highlight .ss { line-height: 100%; color: #0000aa; font-weight: bold } /* Literal.String.Symbol */
+.highlight .bp { line-height: 100%; color: #00aaaa } /* Name.Builtin.Pseudo */
+.highlight .il { line-height: 100%; color: #000000 } /* Literal.Number.Integer.Long */
