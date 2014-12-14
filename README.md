@@ -4,6 +4,9 @@ source_dot_code
 Online Compiler Service
 Inspired from http://codepad.org/
 
+TODO - complete build & deployment guide
+
+
 Django documentation:
 	https://docs.djangoproject.com/en/dev/intro/tutorial01/
 
